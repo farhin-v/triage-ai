@@ -1,0 +1,18 @@
+# Secret keys - NEVER upload these
+.env
+
+# Python junk files - auto-generated, not needed on GitHub
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Virtual environment - too large to upload
+venv/
+.venv/
+
+# Mac system files - irrelevant to the project
+.DS_Store
+
+# Cursor editor files
+.cursor/
