@@ -1,0 +1,18 @@
+SHIPPING ESCALATION GUIDE
+
+Effective Date: January 2024
+
+1. WHEN TO ESCALATE A SHIPPING TICKET
+A shipping ticket must be escalated immediately in the following situations. The order has not been delivered 7 business days beyond the estimated delivery date. The tracking information has not been updated for more than 48 hours. The customer reports that their order was marked as delivered but was not received. The customer reports damaged goods and expresses frustration or threatens legal action. The order value is more than $500.
+
+2. LOST ORDER ESCALATION
+If a customer reports that their order was marked as delivered but not received the support team must first verify the delivery address on the order. If the address is correct the case must be escalated to the shipping team immediately. The shipping team will contact the courier to investigate. The investigation takes 3 to 5 business days. During this time the customer must receive a status update every 24 hours.
+
+3. COURIER RELATED ESCALATIONS
+If the issue is determined to be caused by the courier the shipping team must file a formal complaint with the courier. The customer must be offered a full refund or replacement while the investigation is ongoing. The customer must not be asked to wait for the investigation to complete before receiving compensation.
+
+4. ESCALATION RESPONSE TIMES
+All shipping escalations must be acknowledged within 2 hours. Lost order escalations must be acknowledged within 1 hour. High value order escalations must be acknowledged within 30 minutes.
+
+5. CUSTOMER COMMUNICATION DURING SHIPPING ESCALATION
+The customer must receive an acknowledgement within 1 hour of escalation. Status updates must be sent every 24 hours until the issue is resolved. When the issue is resolved the customer must receive a full explanation of what happened and what was done to resolve it. All communication must be logged in the audit trail.

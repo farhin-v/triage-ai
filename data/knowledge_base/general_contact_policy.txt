@@ -1,0 +1,18 @@
+GENERAL CONTACT POLICY
+
+Effective Date: January 2024
+
+1. WAYS TO CONTACT SUPPORT
+Customers can contact support through the following channels. Live chat is available on the website Monday to Friday 9am to 6pm. Email support is available 24 hours a day 7 days a week with a response time of 24 hours. Phone support is available Monday to Friday 9am to 5pm for enterprise customers only. The support portal allows customers to submit and track tickets at any time.
+
+2. RESPONSE TIME STANDARDS
+Low priority tickets must be responded to within 24 hours. Medium priority tickets must be responded to within 12 hours. High priority tickets must be responded to within 2 hours. All response time standards apply during business hours Monday to Friday. Weekend tickets are responded to on the next business day unless marked as high priority.
+
+3. TICKET SUBMISSION GUIDELINES
+When submitting a support ticket customers must provide their account ID, a clear description of the issue, steps they have already taken to resolve it, and any relevant screenshots or error messages. Tickets with insufficient information will be put on hold until the customer provides the required details.
+
+4. MULTIPLE CONTACT CHANNELS
+If a customer contacts support through multiple channels for the same issue all duplicate tickets must be merged into one. The customer must be informed that their tickets have been merged and given a single reference number for tracking.
+
+5. CONTACT OUTSIDE BUSINESS HOURS
+Customers who contact support outside business hours will receive an automated acknowledgement confirming their ticket has been received. The ticket will be reviewed on the next business day. High priority tickets submitted outside business hours are reviewed within 2 hours by the on call support team.

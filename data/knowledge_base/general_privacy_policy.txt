@@ -1,0 +1,18 @@
+GENERAL PRIVACY POLICY
+
+Effective Date: January 2024
+
+1. DATA WE COLLECT
+We collect the following information from customers. Full name and email address at account creation. Payment information for billing purposes. Support ticket content and communication history. Usage data including login times and feature usage. Device and browser information for technical support purposes.
+
+2. HOW WE USE CUSTOMER DATA
+Customer data is used for the following purposes only. To provide and improve the service. To process payments and manage subscriptions. To respond to support tickets and customer inquiries. To send service related notifications and updates. We never sell customer data to third parties under any circumstances.
+
+3. DATA STORAGE AND SECURITY
+All customer data is stored on encrypted servers. Payment information is never stored directly and is processed through a certified payment gateway. Access to customer data is restricted to authorised staff only. All staff with access to customer data are required to sign a data confidentiality agreement.
+
+4. CUSTOMER DATA RIGHTS
+Customers have the right to request a copy of all data we hold about them. Customers have the right to request deletion of their data at any time. Data deletion requests are processed within 30 days. After account cancellation all customer data is deleted within 30 days as described in the account cancellation policy.
+
+5. DATA BREACH PROCEDURE
+In the event of a data breach the security team must be notified immediately. Affected customers must be notified within 72 hours of the breach being confirmed. The notification must include what data was affected, what steps are being taken to resolve it, and what customers should do to protect themselves.

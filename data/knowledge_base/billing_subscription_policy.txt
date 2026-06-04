@@ -1,0 +1,21 @@
+SUBSCRIPTION BILLING POLICY
+
+Effective Date: January 2024
+
+1. BILLING CYCLE
+All subscriptions are billed on the same date every month or year depending on the plan chosen at signup. Customers receive a billing reminder email 7 days before each renewal.
+
+2. SUBSCRIPTION CANCELLATION
+Customers can cancel their subscription at any time. Cancellation takes effect at the end of the current billing period. No refunds are issued for the remaining days in the current period unless the service was unavailable.
+
+3. SUBSCRIPTION UPGRADE
+When a customer upgrades their plan mid cycle they are charged the difference between the old and new plan on a pro rata basis. The upgraded plan takes effect immediately.
+
+4. SUBSCRIPTION DOWNGRADE
+When a customer downgrades their plan the change takes effect at the start of the next billing cycle. The customer continues to have access to their current plan until then.
+
+5. FAILED RENEWAL
+If a subscription renewal payment fails the customer is notified immediately and given 72 hours to update their payment method. After 72 hours the account is moved to a restricted state until payment is resolved.
+
+6. ANNUAL PLAN REFUNDS
+Customers on annual plans who request a cancellation within the first 30 days receive a full refund. After 30 days a pro rata refund is calculated based on unused months.

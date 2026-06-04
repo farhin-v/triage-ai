@@ -1,0 +1,18 @@
+ACCOUNT ESCALATION GUIDE
+
+Effective Date: January 2024
+
+1. WHEN TO ESCALATE AN ACCOUNT TICKET
+An account ticket must be escalated immediately in the following situations. The customer reports unauthorized access to their account. The customer is unable to access their account for more than 24 hours. The customer reports data loss or missing account information. The customer requests account cancellation and expresses frustration or anger. The customer is an enterprise customer with any account issue.
+
+2. SECURITY RELATED ESCALATIONS
+Any account ticket that involves suspected unauthorized access or security breach must be escalated to the security team within 30 minutes. The customer must be advised to change their password immediately. The account must be flagged for security review. All security escalations are treated as high priority regardless of the customer's expressed urgency.
+
+3. ESCALATION RESPONSE TIMES
+Security related escalations must be acknowledged within 30 minutes. General account escalations must be acknowledged within 2 hours. Enterprise account escalations must be acknowledged within 1 hour at any time of day.
+
+4. INFORMATION REQUIRED FOR ESCALATION
+When escalating an account ticket the following information must be included. Customer account ID. Description of the issue. Steps already taken to resolve it. Whether the issue involves a security concern. Whether the customer is on an enterprise plan.
+
+5. CUSTOMER COMMUNICATION DURING ESCALATION
+The customer must receive an acknowledgement within 1 hour of escalation. For security related escalations the customer must be kept informed every 2 hours until the issue is resolved. All communication with the customer during an account escalation must be logged in the audit trail.

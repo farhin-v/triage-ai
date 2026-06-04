@@ -1,0 +1,18 @@
+SERVICE OUTAGE RESPONSE PROCEDURE
+
+Effective Date: January 2024
+
+1. IDENTIFYING A SERVICE OUTAGE
+A service outage is confirmed when more than 3 customers report the same technical issue within a 30 minute window. A single customer reporting complete loss of service may also indicate an outage if the system status monitor shows abnormal activity. All potential outages must be reported to the technical team immediately.
+
+2. IMMEDIATE STEPS DURING AN OUTAGE
+When an outage is confirmed the technical team must be notified within 15 minutes. A status update must be posted on the system status page within 30 minutes. All incoming support tickets related to the outage must be tagged as outage related and paused from normal processing. A mass email must be sent to all affected customers within 1 hour.
+
+3. CUSTOMER COMMUNICATION DURING OUTAGE
+Customers who contact support during an outage must receive an immediate acknowledgement. The acknowledgement must include confirmation that the issue is known, that the technical team is working on it, and an estimated resolution time if available. Status updates must be posted every 30 minutes until the outage is resolved.
+
+4. OUTAGE RESOLUTION
+When the outage is resolved the technical team must confirm full service restoration before closing the incident. A resolution notification must be sent to all affected customers. All tickets tagged as outage related must be reviewed and closed with an explanation of what caused the outage and how it was resolved.
+
+5. POST OUTAGE REVIEW
+Within 48 hours of resolving an outage a post outage review must be conducted. The review must document the root cause of the outage, the timeline of events, the impact on customers, and the steps taken to prevent recurrence. This report is stored in the audit log.

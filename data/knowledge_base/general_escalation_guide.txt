@@ -1,0 +1,18 @@
+GENERAL ESCALATION GUIDE
+
+Effective Date: January 2024
+
+1. WHEN TO ESCALATE A GENERAL TICKET
+A general ticket must be escalated immediately in the following situations. The customer expresses serious dissatisfaction with the service. The customer threatens legal action or regulatory complaints. The customer requests to speak with a manager or senior staff member. The issue has been open for more than 48 hours without resolution. The customer is a high value or enterprise customer with any unresolved issue.
+
+2. ESCALATION TO MANAGEMENT
+When a customer requests to speak with a manager the support team must acknowledge the request within 1 hour. A manager or senior support agent must contact the customer within 2 hours. The manager must review the full ticket history before contacting the customer. The outcome of the management escalation must be documented in the ticket.
+
+3. LEGAL AND REGULATORY ESCALATIONS
+If a customer threatens legal action or mentions regulatory bodies such as consumer protection agencies the ticket must be escalated to the legal team immediately. The support team must stop all communication with the customer on that ticket until the legal team provides guidance. All communication related to legal escalations must be documented carefully.
+
+4. HIGH VALUE CUSTOMER ESCALATIONS
+High value customers are defined as customers on enterprise plans or customers whose total lifetime spend exceeds $10000. All tickets from high value customers are automatically treated as high priority. High value customer escalations must be acknowledged within 30 minutes and resolved within 24 hours.
+
+5. ESCALATION DOCUMENTATION
+All escalated tickets must be fully documented with the following information. The reason for escalation. The steps already taken to resolve the issue. The outcome of the escalation. Any follow up actions required. This documentation is stored in the audit log and reviewed monthly by the customer experience manager to identify patterns and process improvements.

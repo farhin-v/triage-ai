@@ -1,0 +1,18 @@
+TECHNICAL ACCOUNT ACCESS POLICY
+
+Effective Date: January 2024
+
+1. PASSWORD RESET PROCEDURE
+Customers who cannot access their account should first use the forgot password link on the login page. A password reset email is sent within 5 minutes. If the email does not arrive the customer should check their spam folder. If the email still does not arrive the support team must manually trigger a password reset from the admin panel.
+
+2. TWO FACTOR AUTHENTICATION ISSUES
+If a customer is locked out due to two factor authentication issues the support team must verify the customer identity before disabling two factor authentication. Identity verification requires the customer to provide their full name, registered email address, and the last four digits of their payment method.
+
+3. ACCOUNT LOCKOUT POLICY
+An account is automatically locked after 5 consecutive failed login attempts. The lockout lasts 30 minutes. After 30 minutes the customer can try again. If the customer needs immediate access the support team can manually unlock the account after verifying their identity.
+
+4. SUSPICIOUS ACTIVITY
+If a customer reports suspicious activity on their account the support team must immediately flag the account for security review. The customer must be advised to change their password immediately. The security team must be notified within 1 hour.
+
+5. ACCOUNT RECOVERY
+If a customer has lost access to both their password and their two factor authentication method a full account recovery process must be initiated. This requires the customer to submit a government issued ID. The recovery process takes 2 to 3 business days.

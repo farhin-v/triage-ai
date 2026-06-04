@@ -1,0 +1,18 @@
+ACCOUNT UPGRADE AND DOWNGRADE POLICY
+
+Effective Date: January 2024
+
+1. UPGRADING AN ACCOUNT
+Customers can upgrade their account plan at any time from the account settings page. The upgrade takes effect immediately. The customer is charged the difference between their current plan and the new plan on a pro rata basis for the remaining days in the current billing period.
+
+2. DOWNGRADING AN ACCOUNT
+Customers can downgrade their account plan at any time from the account settings page. The downgrade takes effect at the start of the next billing period. The customer continues to have access to their current plan features until the downgrade takes effect.
+
+3. FEATURE ACCESS AFTER DOWNGRADE
+When a customer downgrades to a lower plan they will lose access to features that are not included in the lower plan. The customer must be informed of which features they will lose before the downgrade is confirmed. If the customer has data that is not supported by the lower plan they must be given 30 days to export it.
+
+4. UPGRADE AND DOWNGRADE ISSUES
+If a customer experiences any issues during an upgrade or downgrade the support team must escalate to the technical team immediately. If a customer was charged incorrectly during an upgrade or downgrade the billing team must be notified and the correct amount refunded within 3 business days.
+
+5. ENTERPRISE PLAN CHANGES
+Customers on enterprise plans cannot upgrade or downgrade through the self service portal. All enterprise plan changes must be handled by the account management team. Customers should contact support and request to speak with their account manager.

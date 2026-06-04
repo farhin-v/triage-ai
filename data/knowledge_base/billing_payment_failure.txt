@@ -1,0 +1,18 @@
+BILLING PAYMENT FAILURE PROCEDURE
+
+Effective Date: January 2024
+
+1. WHAT IS A PAYMENT FAILURE
+A payment failure occurs when a customer attempts to make a payment but the transaction does not complete successfully. This can happen due to insufficient funds, expired card, or bank security blocks.
+
+2. IMMEDIATE STEPS WHEN PAYMENT FAILS
+When a payment failure is detected the system will notify the customer via email within 1 hour. The customer has 72 hours to update their payment method before the account is suspended.
+
+3. MONEY DEDUCTED BUT SERVICE NOT ACTIVATED
+If money was deducted from a customer account but the service was not activated this is treated as a priority case. The support team must escalate this within 2 hours of the report. A full refund is issued within 3 business days.
+
+4. RETRY POLICY
+The system automatically retries failed payments after 24 hours and again after 48 hours. If both retries fail the customer is notified and asked to provide an alternative payment method.
+
+5. ESCALATION CRITERIA
+Payment failure cases must be escalated to the billing team immediately if the customer reports money was deducted, if the failure has persisted for more than 72 hours, or if the customer expresses frustration or urgency.

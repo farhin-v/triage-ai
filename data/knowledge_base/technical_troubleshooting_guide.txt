@@ -1,0 +1,18 @@
+TECHNICAL TROUBLESHOOTING GUIDE
+
+Effective Date: January 2024
+
+1. FIRST STEPS FOR ALL TECHNICAL ISSUES
+When a customer reports a technical issue the support agent must first ask the customer to clear their browser cache and cookies and try again. If the issue persists ask the customer to try a different browser. If the issue still persists ask the customer to try a different device. Document all steps taken and their outcomes.
+
+2. LOGIN AND ACCESS ISSUES
+If a customer cannot log in first verify their account is active in the system. Ask the customer to reset their password using the forgot password link. If password reset does not work escalate to the technical team immediately as this may indicate an account security issue.
+
+3. PERFORMANCE ISSUES
+If a customer reports slow performance ask them to check their internet connection speed. The minimum recommended speed for the service is 10 Mbps. If their connection is adequate but performance is still slow escalate to the technical team with the customer account ID and the time the issue started.
+
+4. ERROR MESSAGES
+If a customer reports an error message ask them to take a screenshot and share it with support. Common error codes and their meanings are listed in the technical reference document. Error codes starting with 5 indicate a server side issue and must be escalated immediately.
+
+5. SERVICE OUTAGES
+If multiple customers report the same issue at the same time this may indicate a service outage. Check the system status page immediately. If an outage is confirmed send a mass notification to affected customers within 30 minutes.

@@ -1,0 +1,18 @@
+BILLING ESCALATION GUIDE
+
+Effective Date: January 2024
+
+1. WHEN TO ESCALATE A BILLING TICKET
+A billing ticket must be escalated immediately in the following situations. The customer reports money was deducted but service was not activated. The customer has been charged more than once for the same transaction. The customer has been waiting more than 48 hours for a refund. The customer is expressing anger or frustration. The total amount in dispute is more than $500.
+
+2. HOW TO ESCALATE
+When a billing ticket meets escalation criteria the support agent must flag it as high priority in the system. The billing team must be notified via Slack in the billing escalations channel. The customer must receive an acknowledgement response within 1 hour of escalation.
+
+3. ESCALATION RESPONSE TIMES
+High priority escalations must be responded to within 2 hours. Medium priority escalations must be responded to within 24 hours. All escalated tickets must be resolved within 3 business days.
+
+4. CUSTOMER COMMUNICATION DURING ESCALATION
+The customer must be kept informed at every stage. An initial acknowledgement must be sent within 1 hour. A status update must be sent every 24 hours until resolution. A resolution email must be sent when the issue is closed.
+
+5. ESCALATION OUTCOMES
+After resolving an escalated billing ticket the support team must document the root cause, the steps taken to resolve it, and any process improvements to prevent recurrence. This information is stored in the audit log for future reference.

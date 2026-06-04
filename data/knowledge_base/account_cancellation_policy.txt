@@ -1,0 +1,18 @@
+ACCOUNT CANCELLATION POLICY
+
+Effective Date: January 2024
+
+1. HOW TO CANCEL AN ACCOUNT
+Customers can cancel their account at any time by going to account settings and selecting the cancel account option. Alternatively customers can contact support and request cancellation. The cancellation takes effect at the end of the current billing period.
+
+2. DATA RETENTION AFTER CANCELLATION
+After an account is cancelled customer data is retained for 30 days. During this period the customer can reactivate their account and all data will be restored. After 30 days all customer data is permanently deleted and cannot be recovered.
+
+3. REACTIVATION AFTER CANCELLATION
+Customers who cancel their account can reactivate it within 30 days by logging in and selecting the reactivate option. After 30 days the customer must create a new account. Data from the cancelled account cannot be transferred to the new account.
+
+4. REFUNDS UPON CANCELLATION
+Customers on monthly plans do not receive a refund for the remaining days in the current billing period. Customers on annual plans who cancel within the first 30 days receive a full refund. After 30 days a pro rata refund is calculated based on unused months.
+
+5. CANCELLATION CONFIRMATION
+When an account is cancelled the customer must receive a confirmation email within 1 hour. The confirmation email must include the cancellation date, the date their data will be deleted, and instructions for reactivation if they change their mind.

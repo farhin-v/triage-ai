@@ -1,0 +1,18 @@
+ACCOUNT CREATION POLICY
+
+Effective Date: January 2024
+
+1. CREATING A NEW ACCOUNT
+Customers can create a new account by visiting the signup page and providing their full name, email address, and a password. A verification email is sent immediately after signup. The customer must verify their email within 24 hours or the account will be deactivated automatically.
+
+2. ACCOUNT VERIFICATION
+If a customer does not receive the verification email they should check their spam folder. If the email is not in spam the support team can manually resend the verification email from the admin panel. A maximum of 3 verification emails can be sent per account per day.
+
+3. DUPLICATE ACCOUNTS
+If a customer tries to create an account with an email that already exists in the system they will be notified and directed to the login page or the forgot password flow. The support team must never create duplicate accounts for the same customer.
+
+4. BUSINESS ACCOUNTS
+Customers who want to create a business account must provide their company name, company registration number, and a business email address. Business accounts have a 3 to 5 business day verification period before full access is granted.
+
+5. ACCOUNT CREATION ISSUES
+If a customer is unable to create an account due to a technical error the support team must collect the customer email address and the error message they received. This must be escalated to the technical team within 2 hours.

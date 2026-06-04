@@ -1,0 +1,18 @@
+TECHNICAL ESCALATION GUIDE
+
+Effective Date: January 2024
+
+1. WHEN TO ESCALATE A TECHNICAL TICKET
+A technical ticket must be escalated immediately in the following situations. The customer reports complete loss of service. The issue has persisted for more than 24 hours without resolution. The customer reports data loss or data corruption. Multiple customers report the same issue at the same time. The customer is unable to access their account despite correct credentials.
+
+2. ESCALATION LEVELS
+Level 1 is the first line of support. They handle basic troubleshooting and common issues. Level 2 is the technical team. They handle complex issues that Level 1 cannot resolve. Level 3 is the engineering team. They handle issues that require code changes or server intervention.
+
+3. INFORMATION REQUIRED FOR ESCALATION
+When escalating a technical ticket the following information must be included. Customer account ID. Description of the issue. Steps already taken to resolve it. Error messages or screenshots provided by the customer. Time the issue started. How many customers are affected.
+
+4. ESCALATION RESPONSE TIMES
+Level 2 escalations must be acknowledged within 2 hours. Level 3 escalations must be acknowledged within 1 hour. Complete loss of service escalations must be acknowledged within 30 minutes regardless of the time of day.
+
+5. CUSTOMER COMMUNICATION DURING TECHNICAL ESCALATION
+The customer must receive an acknowledgement within 1 hour of escalation. Status updates must be sent every 12 hours for ongoing issues. When the issue is resolved the customer must receive a full explanation of what caused the issue and what was done to fix it.
