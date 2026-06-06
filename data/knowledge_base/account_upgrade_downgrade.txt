@@ -15,4 +15,4 @@ When a customer downgrades to a lower plan they will lose access to features tha
 If a customer experiences any issues during an upgrade or downgrade the support team must escalate to the technical team immediately. If a customer was charged incorrectly during an upgrade or downgrade the billing team must be notified and the correct amount refunded within 3 business days.
 
 5. ENTERPRISE PLAN CHANGES
-Customers on enterprise plans cannot upgrade or downgrade through the self service portal. All enterprise plan changes must be handled by the account management team. Customers should contact support and request to speak with their account manager.
+Customers on enterprise plans cannot upgrade or downgrade through the self service portal. All enterprise plan changes must be handled by the account management team. Customers should contact support and request to speak with their account manager.    
