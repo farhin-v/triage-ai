@@ -10,16 +10,16 @@ from app.database.connections import create_tables
 create_tables()
 
 app = FastAPI(
-    title = "Triage AI",
-    description = "AI powered support ticket automation using Langgraph and RAG",
-    version = "1.0.0"
+    title="Triage AI",
+    description="AI powered support ticket automation using Langgraph and RAG",
+    version="1.0.0"
 )
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_methods=['*'],
-    allow_headers=['*']
+    allow_methods=["*"],
+    allow_headers=["*"]
 )
 
 app.include_router(router)
