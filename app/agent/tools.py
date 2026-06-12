@@ -29,7 +29,11 @@ def search_knowledge_base(query: str) -> List[str]:
 def classify_ticket(subject: str, body: str) -> dict:
     """Classify the support ticket and detect urgency and sentiment using Gemini."""
     
-    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite", google_api_key=os.getenv("GOOGLE_API_KEY"))
+    llm = ChatGoogleGenerativeAI(
+        model="gemini-3.1-flash-lite",
+        google_api_key=os.getenv("GOOGLE_API_KEY"),
+        model_kwargs={"thinking_level": "low"}
+    )
     
     prompt = f"""You are a support ticket classifier. Analyze the ticket below and return ONLY the following format with no extra text:
 
@@ -59,7 +63,11 @@ Ticket Body: {body}"""
 def decide_escalation(category: str, urgency: str, sentiment: str) -> dict:
     """Decide whether the ticket should be escalated to a human agent."""
     
-    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite", google_api_key=os.getenv("GOOGLE_API_KEY"))
+    llm = ChatGoogleGenerativeAI(
+     model="gemini-3.1-flash-lite",
+     google_api_key=os.getenv("GOOGLE_API_KEY"),
+     model_kwargs={"thinking_level": "low"}
+    )
     
     prompt = f"""You are a support ticket escalation system. Based on the ticket details below decide if this ticket needs a human agent or can be handled automatically.
 

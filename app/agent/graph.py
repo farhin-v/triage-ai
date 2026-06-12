@@ -48,8 +48,11 @@ def escalation_node(state: AgentState) -> AgentState:
 def response_generation_node(state: AgentState) -> AgentState:
     """Generate a response to the customer using Gemini."""
     
-    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite", google_api_key=os.getenv("GOOGLE_API_KEY"))
-    
+    llm = ChatGoogleGenerativeAI(
+        model="gemini-3.1-flash-lite",
+        google_api_key=os.getenv("GOOGLE_API_KEY"),
+        model_kwargs={"thinking_level": "low"}
+    )    
     docs_text = "\n\n".join(state["retrieved_docs"]) if state["retrieved_docs"] else "No relevant documents found."
     
     prompt = f"""You are a helpful customer support agent. Write a professional and empathetic response to the customer ticket below.
