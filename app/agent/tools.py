@@ -1,7 +1,7 @@
 from langchain_core.tools import tool
 from qdrant_client import QdrantClient
-from sentence_transformers import SentenceTransformer
 from langchain_google_genai import ChatGoogleGenerativeAI
+from google import genai
 from typing import List
 import os
 
@@ -9,16 +9,24 @@ import os
 def search_knowledge_base(query: str) -> List[str]:
     """Search the Qdrant knowledge base for documents relevant to the query."""
     client = QdrantClient(
-    url=os.getenv("QDRANT_URL", "http://localhost:6333"),
-    api_key=os.getenv("QDRANT_API_KEY", None)
+        url=os.getenv("QDRANT_URL", "http://localhost:6333"),
+        api_key=os.getenv("QDRANT_API_KEY", None)
     )
-    model = SentenceTransformer("all-MiniLM-L6-v2")
-    query_vector = model.encode(query).tolist()
+
+    genai_client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
+
+    result = genai_client.models.embed_content(
+        model="gemini-embedding-001",
+        contents=query
+    )
+    query_vector = result.embeddings[0].values
+
     results = client.query_points(
         collection_name="knowledge_base",
         query=query_vector,
         limit=5
     )
+
     docs = [result.payload["text"] for result in results.points]
     return docs
 

@@ -1,24 +1,32 @@
 import os
 import sys
+import time
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from qdrant_client import QdrantClient
-from qdrant_client.models import VectorParams, Distance, PointStruct
-from sentence_transformers import SentenceTransformer
 from dotenv import load_dotenv
 load_dotenv()
 
+from qdrant_client import QdrantClient
+from qdrant_client.models import VectorParams, Distance, PointStruct
+from google import genai
 
 client = QdrantClient(
     url=os.getenv("QDRANT_URL", "http://localhost:6333"),
     api_key=os.getenv("QDRANT_API_KEY", None)
 )
-model = SentenceTransformer("all-MiniLM-L6-v2")
+
+genai_client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
 COLLECTION_NAME = "knowledge_base"
 
+def get_embedding(text):
+    result = genai_client.models.embed_content(
+        model="gemini-embedding-001",
+        contents=text
+    )
+    return result.embeddings[0].values
+
 def create_collection():
-    # Delete existing collection if it exists
     existing = [c.name for c in client.get_collections().collections]
     if COLLECTION_NAME in existing:
         client.delete_collection(COLLECTION_NAME)
@@ -27,66 +35,53 @@ def create_collection():
     client.create_collection(
         collection_name=COLLECTION_NAME,
         vectors_config=VectorParams(
-            size=384,
+            size=3072,
             distance=Distance.COSINE
         )
     )
     print("Collection created successfully")
 
 def split_into_sections(text, filename):
-    """
-    Split document into sections based on numbered headings.
-    Each numbered section becomes one chunk.
-    Preserves the document title and section heading with the content.
-    """
     lines = text.strip().split("\n")
-    
-    # Extract document title (first non-empty line)
+
     title = ""
     for line in lines:
         if line.strip():
             title = line.strip()
             break
-    
+
     chunks = []
     current_section_lines = []
     current_heading = ""
-    
+
     for line in lines:
         stripped = line.strip()
         if not stripped:
             continue
-        
-        # Detect numbered section headings like "1.", "2.", "1. HEADING"
+
         is_section_heading = False
         for i in range(1, 20):
             if stripped.startswith(f"{i}.") and len(stripped) > 2:
                 is_section_heading = True
                 break
-        
+
         if is_section_heading:
-            # Save previous section if it exists
             if current_section_lines:
                 chunk_text = f"{title}\n{current_heading}\n" + " ".join(current_section_lines)
                 chunks.append(chunk_text.strip())
-            
-            # Start new section
             current_heading = stripped
             current_section_lines = []
         else:
-            # Skip the title line since we already captured it
             if stripped != title:
                 current_section_lines.append(stripped)
-    
-    # Save the last section
+
     if current_section_lines:
         chunk_text = f"{title}\n{current_heading}\n" + " ".join(current_section_lines)
         chunks.append(chunk_text.strip())
-    
-    # If no sections were found treat whole document as one chunk
+
     if not chunks:
         chunks.append(text.strip())
-    
+
     return chunks
 
 def load_documents():
@@ -121,9 +116,20 @@ def store_in_qdrant(documents):
 
         for chunk in chunks:
             if len(chunk.strip()) < 20:
-                continue  # skip very short chunks
+                continue
 
-            vector = model.encode(chunk).tolist()
+            # Retry up to 3 times with delay
+            for attempt in range(3):
+                try:
+                    vector = get_embedding(chunk)
+                    break
+                except Exception as e:
+                    if attempt < 2:
+                        print(f"  Retrying chunk after error: {e}")
+                        time.sleep(5)
+                    else:
+                        raise e
+
             points.append(PointStruct(
                 id=point_id,
                 vector=vector,
@@ -134,6 +140,7 @@ def store_in_qdrant(documents):
                 }
             ))
             point_id += 1
+            time.sleep(0.5)  # small delay between chunks to avoid rate limits
 
     client.upsert(
         collection_name=COLLECTION_NAME,
