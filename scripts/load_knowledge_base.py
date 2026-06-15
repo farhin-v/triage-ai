@@ -5,8 +5,14 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from qdrant_client import QdrantClient
 from qdrant_client.models import VectorParams, Distance, PointStruct
 from sentence_transformers import SentenceTransformer
+from dotenv import load_dotenv
+load_dotenv()
 
-client = QdrantClient(url="http://localhost:6333")
+
+client = QdrantClient(
+    url=os.getenv("QDRANT_URL", "http://localhost:6333"),
+    api_key=os.getenv("QDRANT_API_KEY", None)
+)
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
 COLLECTION_NAME = "knowledge_base"

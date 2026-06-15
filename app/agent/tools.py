@@ -8,7 +8,10 @@ import os
 @tool
 def search_knowledge_base(query: str) -> List[str]:
     """Search the Qdrant knowledge base for documents relevant to the query."""
-    client = QdrantClient(url=os.getenv("QDRANT_URL", "http://localhost:6333"))
+    client = QdrantClient(
+    url=os.getenv("QDRANT_URL", "http://localhost:6333"),
+    api_key=os.getenv("QDRANT_API_KEY", None)
+    )
     model = SentenceTransformer("all-MiniLM-L6-v2")
     query_vector = model.encode(query).tolist()
     results = client.query_points(
