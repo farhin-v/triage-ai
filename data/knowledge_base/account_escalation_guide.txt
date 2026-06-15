@@ -3,16 +3,70 @@ ACCOUNT ESCALATION GUIDE
 Effective Date: January 2024
 
 1. WHEN TO ESCALATE AN ACCOUNT TICKET
-An account ticket must be escalated immediately in the following situations. The customer reports unauthorized access to their account. The customer is unable to access their account for more than 24 hours. The customer reports data loss or missing account information. The customer requests account cancellation and expresses frustration or anger. The customer is an enterprise customer with any account issue.
+
+An account ticket must be escalated immediately if any of the following conditions apply:
+
+- The customer reports suspected unauthorized access to their account.
+- The customer is unable to access their account for more than 24 hours.
+- The customer reports missing account data or potential data loss.
+- The customer requests account cancellation and expresses significant frustration, anger, or dissatisfaction.
+- The customer is on an Enterprise Plan and reports any account-related issue.
+- The Support Team is unable to resolve the issue after standard troubleshooting steps have been completed.
 
 2. SECURITY RELATED ESCALATIONS
-Any account ticket that involves suspected unauthorized access or security breach must be escalated to the security team within 30 minutes. The customer must be advised to change their password immediately. The account must be flagged for security review. All security escalations are treated as high priority regardless of the customer's expressed urgency.
+
+Any ticket involving a suspected security incident must be escalated to the Security Team within 30 minutes.
+
+Examples of security incidents include:
+- Unauthorized login attempts.
+- Account takeover concerns.
+- Suspicious password changes.
+- Unrecognized account activity.
+- Suspected security breaches.
+
+Before escalation:
+- Advise the customer to change their password immediately.
+- Verify the customer's identity using standard account verification procedures.
+- Flag the account for Security Review.
+
+All security-related escalations are classified as High Priority regardless of the customer's stated urgency.
 
 3. ESCALATION RESPONSE TIMES
-Security related escalations must be acknowledged within 30 minutes. General account escalations must be acknowledged within 2 hours. Enterprise account escalations must be acknowledged within 1 hour at any time of day.
+
+The following acknowledgment targets apply:
+
+- Security Escalations: within 30 minutes.
+- Enterprise Account Escalations: within 1 hour.
+- General Account Escalations: within 2 hours.
+
+Response time targets apply 24 hours a day, 7 days a week.
 
 4. INFORMATION REQUIRED FOR ESCALATION
-When escalating an account ticket the following information must be included. Customer account ID. Description of the issue. Steps already taken to resolve it. Whether the issue involves a security concern. Whether the customer is on an enterprise plan.
+
+The following information must be included in every escalation request:
+
+- Customer Account ID.
+- Customer email address.
+- Description of the issue.
+- Date and time the issue was reported.
+- Troubleshooting steps already performed.
+- Whether a security concern is involved.
+- Whether the customer is on an Enterprise Plan.
+- Any screenshots, logs, or supporting evidence provided by the customer.
+
+Incomplete escalation requests may be returned for additional information.
 
 5. CUSTOMER COMMUNICATION DURING ESCALATION
-The customer must receive an acknowledgement within 1 hour of escalation. For security related escalations the customer must be kept informed every 2 hours until the issue is resolved. All communication with the customer during an account escalation must be logged in the audit trail.
+
+Customers must receive an acknowledgment within 1 hour after an escalation is submitted.
+
+For Security Escalations:
+- Customers must receive status updates every 2 hours until the issue is resolved or contained.
+
+For General and Enterprise Escalations:
+- Customers must receive status updates at least once every business day until resolution.
+
+All customer communications related to escalations must be recorded in the audit trail, including:
+- Date and time of communication.
+- Communication channel used.
+- Summary of information provided.

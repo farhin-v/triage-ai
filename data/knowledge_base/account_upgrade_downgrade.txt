@@ -3,16 +3,63 @@ ACCOUNT UPGRADE AND DOWNGRADE POLICY
 Effective Date: January 2024
 
 1. UPGRADING AN ACCOUNT
-Customers can upgrade their account plan at any time from the account settings page. The upgrade takes effect immediately. The customer is charged the difference between their current plan and the new plan on a pro rata basis for the remaining days in the current billing period.
+
+Customers may upgrade their account plan at any time through the Account Settings page.
+
+When an upgrade is completed:
+- The upgrade takes effect immediately.
+- New plan features become available immediately.
+- The customer is charged the prorated difference between their current plan and the new plan for the remainder of the current billing period.
+
+If payment for the upgrade cannot be processed, the upgrade request will not be completed until payment is successfully received.
 
 2. DOWNGRADING AN ACCOUNT
-Customers can downgrade their account plan at any time from the account settings page. The downgrade takes effect at the start of the next billing period. The customer continues to have access to their current plan features until the downgrade takes effect.
+
+Customers may downgrade their account plan at any time through the Account Settings page.
+
+When a downgrade is requested:
+- The downgrade becomes effective at the start of the next billing period.
+- The customer retains access to all current plan features until the downgrade takes effect.
+- No partial refunds are provided for the remaining portion of the current billing period.
+
+Customers may cancel a pending downgrade request at any time before the next billing period begins.
 
 3. FEATURE ACCESS AFTER DOWNGRADE
-When a customer downgrades to a lower plan they will lose access to features that are not included in the lower plan. The customer must be informed of which features they will lose before the downgrade is confirmed. If the customer has data that is not supported by the lower plan they must be given 30 days to export it.
+
+When a downgrade becomes effective:
+- Access to features not included in the new plan is removed immediately.
+- The customer must be informed of feature changes before confirming the downgrade.
+
+If the customer has data that exceeds the limits of the lower plan:
+- The data will remain accessible for 30 days.
+- The customer may export or remove excess data during this period.
+- After 30 days, excess data may become inaccessible until the account is upgraded or brought within plan limits.
 
 4. UPGRADE AND DOWNGRADE ISSUES
-If a customer experiences any issues during an upgrade or downgrade the support team must escalate to the technical team immediately. If a customer was charged incorrectly during an upgrade or downgrade the billing team must be notified and the correct amount refunded within 3 business days.
+
+If a customer experiences technical issues during an upgrade or downgrade:
+- The issue must be escalated to the Technical Team immediately.
+
+If a customer reports an incorrect charge:
+- The Billing Team must be notified immediately.
+- The charge must be reviewed within 1 business day.
+- Any approved refund or billing adjustment must be processed within 3 business days.
+
+Customers must provide:
+- Account ID.
+- Description of the issue.
+- Date and time the issue occurred.
+- Any billing receipts or error messages, if available.
 
 5. ENTERPRISE PLAN CHANGES
-Customers on enterprise plans cannot upgrade or downgrade through the self service portal. All enterprise plan changes must be handled by the account management team. Customers should contact support and request to speak with their account manager.    
+
+Customers on Enterprise Plans cannot upgrade or downgrade through the self-service portal.
+
+All Enterprise Plan changes must be handled by the Account Management Team.
+
+Customers requesting an Enterprise Plan change should:
+- Contact the Support Team.
+- Provide their company name and account information.
+- Request assistance from their assigned Account Manager.
+
+Enterprise Plan change requests are typically reviewed within 2 business days.

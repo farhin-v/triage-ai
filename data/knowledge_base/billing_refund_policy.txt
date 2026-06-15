@@ -3,16 +3,57 @@ BILLING REFUND POLICY
 Effective Date: January 2024
 
 1. REFUND ELIGIBILITY
-Customers are eligible for a full refund within 30 days of purchase if the service was not delivered as described. Refund requests made after 30 days will be reviewed on a case by case basis.
+
+Customers are eligible for a full refund within 30 calendar days of purchase if any of the following conditions are met:
+
+- The service was not activated after successful payment.
+- The service was not delivered due to a verified technical issue on the company side.
+- The customer was charged incorrectly for a higher plan than purchased.
+
+Refund requests made after 30 days are not automatically eligible and will be reviewed on a case-by-case basis by the Billing Team.
+
+Refund approval after 30 days is only granted in exceptional cases such as verified system errors or duplicate billing.
 
 2. DUPLICATE CHARGES
-If a customer has been charged more than once for the same transaction, the duplicate charge will be refunded within 3 to 5 business days. Customers should provide their transaction ID and bank statement as proof.
+
+If a customer is charged more than once for the same transaction:
+
+- The duplicate charge will be refunded in full.
+- The refund is processed within 3 to 5 business days after verification.
+- Customers must provide at least one of the following:
+  - Transaction ID
+  - Payment receipt
+  - Bank statement showing duplicate charge
 
 3. FAILED PAYMENT REFUNDS
-If a payment was deducted from a customer's account but the service was not activated, the full amount will be refunded within 5 to 7 business days.
+
+If a customer’s payment was successfully deducted but the service was not activated:
+
+- The issue must be verified by the Billing Team.
+- If confirmed, a full refund is issued within 5 to 7 business days.
+- Alternatively, the service may be activated immediately if the customer still wants to continue without refund.
+
+If the payment was only authorized (not captured), no refund is required. The pending hold will be released according to the customer’s bank policies.
 
 4. HOW TO REQUEST A REFUND
-Customers can request a refund by contacting support with their order ID and reason for the refund. All refund requests are processed within 2 business days of approval.
 
-5. NON REFUNDABLE ITEMS
-Setup fees and one time configuration charges are non refundable. Partially used subscription months are non refundable unless the service was unavailable for more than 48 hours.
+Customers may request a refund by contacting Support and providing:
+
+- Order ID or Transaction ID.
+- Registered email address.
+- Reason for refund request.
+
+Refund requests are reviewed within 2 business days of submission.
+
+Approved refunds are processed based on the timelines defined in Sections 2 and 3.
+
+5. NON-REFUNDABLE ITEMS
+
+The following are non-refundable:
+
+- Setup fees and one-time configuration charges.
+- Partially used subscription periods (unless service was unavailable for more than 48 consecutive hours).
+- Add-on services or promotional credits once consumed.
+
+Exception:
+If the service is unavailable for more than 48 consecutive hours due to a verified system outage, the customer may be eligible for a prorated refund or account credit.

@@ -5,6 +5,7 @@ from app.database.models import Ticket
 from app.agent.graph import agent
 from pydantic import BaseModel
 import uuid
+import traceback
 
 class TicketRequest(BaseModel):
     subject: str
@@ -43,6 +44,7 @@ def submit_ticket(ticket: TicketRequest, db: Session = Depends(get_db)):
     try:
         result = agent.invoke(initial_state)
     except Exception as e:
+        traceback.print_exc()
         raise HTTPException(status_code=500, detail=str(e))
     
     return {

@@ -3,16 +3,70 @@ ACCOUNT CANCELLATION POLICY
 Effective Date: January 2024
 
 1. HOW TO CANCEL AN ACCOUNT
-Customers can cancel their account at any time by going to account settings and selecting the cancel account option. Alternatively customers can contact support and request cancellation. The cancellation takes effect at the end of the current billing period.
+
+Customers may cancel their account at any time through the Account Settings page by selecting Cancel Account.
+
+Customers who cannot access their account may request cancellation through the Support Team. To process the request, customers must provide:
+- The email address associated with the account.
+- The account holder's full name.
+- A brief reason for cancellation.
+
+The Support Team may request additional information to verify account ownership before processing the cancellation request.
+
+Cancellation requests submitted through support are typically processed within 24 hours.
+
+Cancellation requests do not immediately terminate service. The account remains active until the end of the current billing period.
 
 2. DATA RETENTION AFTER CANCELLATION
-After an account is cancelled customer data is retained for 30 days. During this period the customer can reactivate their account and all data will be restored. After 30 days all customer data is permanently deleted and cannot be recovered.
+
+Customer data is retained for 30 calendar days after the cancellation becomes effective.
+
+During this 30-day retention period:
+- Customers may reactivate their account.
+- All account data and settings will be restored.
+
+After the 30-day retention period expires:
+- All customer data is permanently deleted.
+- Deleted data cannot be recovered.
+- Deleted data cannot be transferred to another account.
 
 3. REACTIVATION AFTER CANCELLATION
-Customers who cancel their account can reactivate it within 30 days by logging in and selecting the reactivate option. After 30 days the customer must create a new account. Data from the cancelled account cannot be transferred to the new account.
+
+Customers may reactivate a cancelled account within 30 calendar days of the cancellation effective date by logging into their account and selecting Reactivate Account.
+
+Customers who cannot access their account may contact the Support Team for assistance with reactivation.
+
+After 30 days:
+- Reactivation is no longer available.
+- A new account must be created.
+- Data from the previously cancelled account cannot be restored or transferred.
 
 4. REFUNDS UPON CANCELLATION
-Customers on monthly plans do not receive a refund for the remaining days in the current billing period. Customers on annual plans who cancel within the first 30 days receive a full refund. After 30 days a pro rata refund is calculated based on unused months.
+
+Monthly Plans
+
+Customers subscribed to a monthly plan are not eligible for refunds or credits for unused days remaining in the current billing period.
+
+Annual Plans
+
+Customers subscribed to an annual plan may receive:
+- A full refund if cancellation occurs within the first 30 days of purchase.
+- A prorated refund based on unused full months if cancellation occurs after the first 30 days.
+
+Refund requests must be submitted within 14 days of account cancellation.
+
+Approved refunds are processed within 7 business days and returned to the original payment method whenever possible.
 
 5. CANCELLATION CONFIRMATION
-When an account is cancelled the customer must receive a confirmation email within 1 hour. The confirmation email must include the cancellation date, the date their data will be deleted, and instructions for reactivation if they change their mind.
+
+A cancellation confirmation email must be sent within 1 hour of the cancellation request being processed.
+
+The confirmation email must include:
+- The cancellation effective date.
+- The account access expiration date.
+- The scheduled data deletion date.
+- Instructions for account reactivation.
+
+If a customer does not receive a confirmation email within 24 hours, they should contact the Support Team.
+
+Customers are responsible for ensuring that their account email address is current and accessible.
