@@ -64,7 +64,7 @@ Evaluate only what is explicitly mentioned:
 - Security concern (yes/no/unknown)
 
 STEP 3 — COMPLETENESS CHECK
-- Identify missing required information.
+- Identify missing required information to resolve the issue.
 - Do NOT assume missing details.
 
 --------------------------------------------------

@@ -14,7 +14,7 @@ def process_ticket(subject, body):
     
     try:
         response = requests.post(
-            "http://localhost:8000/tickets/",
+            "https://triage-ai-cylb.onrender.com/tickets/",
             json={"subject": subject, "body": body}
         )
         result = response.json()
