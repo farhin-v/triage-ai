@@ -24,6 +24,10 @@ app.add_middleware(
 
 app.include_router(router)
 
+@app.get("/")
+def root():
+    return {"status": "ok", "app": "Triage AI", "version": "1.0.0"}
+
 @app.get("/health")
 def health_check():
     return {"status": "ok", "app": "Triage AI"}
