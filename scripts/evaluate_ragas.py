@@ -9,9 +9,12 @@ import requests
 from ragas import evaluate, RunConfig
 from ragas.dataset_schema import EvaluationDataset
 from ragas.llms import LangchainLLMWrapper
-from ragas.metrics import Faithfulness, FactualCorrectness
+from ragas.embeddings import BaseRagasEmbeddings
+from ragas.metrics import Faithfulness, FactualCorrectness, LLMContextPrecisionWithoutReference, ResponseRelevancy
 from langchain_google_genai import ChatGoogleGenerativeAI
+from google import genai
 from app.agent.tools import search_knowledge_base
+from typing import List
 
 # Set up Gemini LLM wrapped for RAGAS
 evaluator_llm = LangchainLLMWrapper(ChatGoogleGenerativeAI(
@@ -19,17 +22,48 @@ evaluator_llm = LangchainLLMWrapper(ChatGoogleGenerativeAI(
     google_api_key=os.getenv("GOOGLE_API_KEY")
 ))
 
-# Test tickets to send to the real agent
+# Reuse the same embedding approach already proven to work in load_knowledge_base.py
+# (the langchain_google_genai embedding wrapper hit model-name format errors earlier,
+# so we call the google-genai SDK directly here too instead of reintroducing that wrapper)
+genai_client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
+
+class GeminiRagasEmbeddings(BaseRagasEmbeddings):
+    """Minimal RAGAS-compatible embeddings wrapper around the google-genai SDK,
+    so ResponseRelevancy (which needs embeddings, not just an LLM) can run
+    without depending on langchain_google_genai's embedding class."""
+
+    def embed_query(self, text: str) -> List[float]:
+        result = genai_client.models.embed_content(
+            model="gemini-embedding-001",
+            contents=text
+        )
+        return result.embeddings[0].values
+
+    def embed_documents(self, texts: List[str]) -> List[List[float]]:
+        return [self.embed_query(t) for t in texts]
+
+    async def aembed_query(self, text: str) -> List[float]:
+        return self.embed_query(text)
+
+    async def aembed_documents(self, texts: List[str]) -> List[List[float]]:
+        return self.embed_documents(texts)
+
+evaluator_embeddings = GeminiRagasEmbeddings()
+
+# Test tickets to send to the real agent.
+# NOTE: 3 tickets is too few for a stable average — one verbose reply swings the
+# whole score. Add more tickets here (with accurate reference answers drawn from
+# your actual policy docs) before trusting / reporting the numbers.
 test_tickets = [
     {
         "subject": "I was charged twice for my subscription and need a refund",
         "body": "I noticed two charges of $29.99 from your company on the same day. I need the duplicate charge refunded immediately.",
-        "reference": "Duplicate charges are eligible for a full refund. Customers should provide their transaction ID for processing within 3-5 business days."
+        "reference": "Duplicate charges for the same transaction are refunded in full. The refund is processed within 3 to 5 business days after verification. The customer must provide at least one of: transaction ID, payment receipt, or bank statement showing the duplicate charge."
     },
     {
         "subject": "I cannot log into my account",
         "body": "I have been trying to log into my account for two days but keep getting an error. I need urgent help.",
-        "reference": "Customers unable to log in should try clearing cache and cookies or use a different browser. Support is available within 24 hours."
+        "reference": "Customers should use the forgot password link on the login page; a reset email is sent within 5 minutes. If it does not arrive, check spam, and if it still does not arrive, support must manually trigger a password reset from the admin panel."
     },
     {
         "subject": "Where is my order? It has been 2 weeks",
@@ -45,7 +79,7 @@ dataset_list = []
 
 for ticket in test_tickets:
     print(f"Processing: {ticket['subject']}")
-    
+
     try:
         response = requests.post(
             "http://localhost:8000/tickets/",
@@ -56,27 +90,37 @@ for ticket in test_tickets:
             timeout=60
         )
         result = response.json()
-        
+
         if "detail" in result:
             print(f"  Error: {result['detail']}")
             continue
-        
-        # Get the actual agent response and retrieved docs
+
+        # Get the actual agent response
         generated_response = result.get("generated_response", "")
-        
-        # Also get retrieved contexts from Qdrant for this ticket
-        query = f"{ticket['subject']} {ticket['body']}"
+        category = result.get("category", "")
+
+        # Match the agent's retrieval query EXACTLY — the agent prepends the
+        # category (see retrieval_node in graph.py). Vector retrieval is
+        # deterministic, so the same query returns the same contexts the agent
+        # actually generated from. This is the core faithfulness fix: we now
+        # grade the response against the evidence the agent really saw, not a
+        # different re-retrieval.
+        query = f"{category} {ticket['subject']} {ticket['body']}"
         retrieved_contexts = search_knowledge_base.invoke({"query": query})
-        
+
+        # Eyeball each reply: how much is policy content vs greeting/sign-off?
+        print(f"  Category: {category}")
+        print(f"  Response:\n{generated_response}\n")
+
         dataset_list.append({
             "user_input": ticket["subject"] + " " + ticket["body"],
             "response": generated_response,
             "retrieved_contexts": retrieved_contexts,
             "reference": ticket["reference"]
         })
-        
+
         print(f"  Done — response length: {len(generated_response)} chars")
-        
+
     except Exception as e:
         print(f"  Failed: {str(e)}")
 
@@ -90,7 +134,9 @@ evaluation_dataset = EvaluationDataset.from_list(dataset_list)
 
 metrics = [
     Faithfulness(llm=evaluator_llm),
-    FactualCorrectness(llm=evaluator_llm)
+    FactualCorrectness(llm=evaluator_llm),
+    LLMContextPrecisionWithoutReference(llm=evaluator_llm),
+    ResponseRelevancy(llm=evaluator_llm, embeddings=evaluator_embeddings),
 ]
 
 run_config = RunConfig(
@@ -108,20 +154,39 @@ results = evaluate(
 
 df = results.to_pandas()
 
-print("\n" + "="*60)
+print("\n" + "=" * 70)
 print("RAGAS EVALUATION RESULTS — REAL AGENT RESPONSES")
-print("="*60)
+print("=" * 70)
 
-faithfulness = df['faithfulness'].mean() if 'faithfulness' in df.columns else None
-factual = df['factual_correctness(mode=f1)'].mean() if 'factual_correctness(mode=f1)' in df.columns else None
+metric_columns = {
+    "Faithfulness": "faithfulness",
+    "Factual Correctness": "factual_correctness(mode=f1)",
+    "Context Precision (retrieval)": "llm_context_precision_without_reference",
+    "Response Relevancy": "answer_relevancy",
+}
 
-print(f"Faithfulness       : {faithfulness:.2f}" if isinstance(faithfulness, float) else "Faithfulness       : could not compute")
-print(f"Factual Correctness: {factual:.2f}" if isinstance(factual, float) else "Factual Correctness: could not compute")
+scores = {}
+for label, col in metric_columns.items():
+    if col in df.columns:
+        scores[label] = df[col].mean()
+        print(f"{label:32}: {scores[label]:.2f}")
+    else:
+        print(f"{label:32}: could not compute (column '{col}' not in results)")
 
-print("="*60)
+print("=" * 70)
+print("\nWhat each metric tells you:")
+print("  Faithfulness          -> generation: is the response grounded in retrieved docs?")
+print("  Factual Correctness   -> generation: do the facts match the reference answer?")
+print("  Context Precision     -> retrieval: was what we retrieved actually relevant?")
+print("  Response Relevancy    -> generation: does the response address what was asked?")
+print("\nDiagnostic pattern:")
+print("  Low Context Precision + low Faithfulness -> fix retrieval/chunking first")
+print("  High Context Precision + low Faithfulness -> fix the generation prompt")
+print("  High Faithfulness + low Response Relevancy -> grounded, but answering the wrong thing")
+
 print("\nScore Guide:")
 print("0.8 - 1.0 : Excellent")
 print("0.6 - 0.8 : Good")
 print("0.4 - 0.6 : Needs improvement")
 print("0.0 - 0.4 : Poor")
-print("="*60 + "\n")
+print("=" * 70 + "\n")

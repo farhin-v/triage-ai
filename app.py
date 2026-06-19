@@ -16,7 +16,7 @@ def process_ticket(subject, body):
         response = requests.post(
             "https://triage-ai-cylb.onrender.com/tickets/",
             json={"subject": subject, "body": body}
-            )
+        )
         result = response.json()
         
         if "detail" in result:
