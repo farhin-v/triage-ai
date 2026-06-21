@@ -24,7 +24,7 @@ def search_knowledge_base(query: str) -> List[str]:
     results = client.query_points(
         collection_name="knowledge_base",
         query=query_vector,
-        limit=5  # was 2 — too few; the relevant policy section was often ranked 3rd-5th and never retrieved
+        limit=5  
     )
 
     docs = [point.payload["text"] for point in results.points]
