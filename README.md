@@ -48,7 +48,7 @@ Backend:  FastAPI (Render)
 | Layer | Technology |
 |---|---|
 | Agent Orchestration | LangGraph |
-| LLM | Google Gemini (gemini-2.0-flash-lite) |
+| LLM | Google Gemini (gemini-3.1-flash-lite) |
 | Embeddings | Google Gemini Embeddings (gemini-embedding-001, 3072-dim) |
 | Vector Store | Qdrant Cloud |
 | Relational DB | PostgreSQL (Render) |
