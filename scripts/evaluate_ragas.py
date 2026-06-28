@@ -16,15 +16,11 @@ from google import genai
 from app.agent.tools import search_knowledge_base
 from typing import List
 
-# Set up Gemini LLM wrapped for RAGAS
 evaluator_llm = LangchainLLMWrapper(ChatGoogleGenerativeAI(
     model="gemini-3.1-flash-lite",
     google_api_key=os.getenv("GOOGLE_API_KEY")
 ))
 
-# Reuse the same embedding approach already proven to work in load_knowledge_base.py
-# (the langchain_google_genai embedding wrapper hit model-name format errors earlier,
-# so we call the google-genai SDK directly here too instead of reintroducing that wrapper)
 genai_client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
 class GeminiRagasEmbeddings(BaseRagasEmbeddings):
@@ -50,10 +46,6 @@ class GeminiRagasEmbeddings(BaseRagasEmbeddings):
 
 evaluator_embeddings = GeminiRagasEmbeddings()
 
-# Test tickets to send to the real agent.
-# NOTE: 3 tickets is too few for a stable average — one verbose reply swings the
-# whole score. Add more tickets here (with accurate reference answers drawn from
-# your actual policy docs) before trusting / reporting the numbers.
 test_tickets = [
     {
         "subject": "I was charged twice for my subscription and need a refund",
@@ -95,20 +87,13 @@ for ticket in test_tickets:
             print(f"  Error: {result['detail']}")
             continue
 
-        # Get the actual agent response
+        
         generated_response = result.get("generated_response", "")
         category = result.get("category", "")
-
-        # Match the agent's retrieval query EXACTLY — the agent prepends the
-        # category (see retrieval_node in graph.py). Vector retrieval is
-        # deterministic, so the same query returns the same contexts the agent
-        # actually generated from. This is the core faithfulness fix: we now
-        # grade the response against the evidence the agent really saw, not a
-        # different re-retrieval.
+    
         query = f"{category} {ticket['subject']} {ticket['body']}"
         retrieved_contexts = search_knowledge_base.invoke({"query": query})
 
-        # Eyeball each reply: how much is policy content vs greeting/sign-off?
         print(f"  Category: {category}")
         print(f"  Response:\n{generated_response}\n")
 
