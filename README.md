@@ -158,5 +158,5 @@ python app.py
 
 ## Known Constraints
 
-- **Cold starts:** Hosted on Render free tier — first request after inactivity takes 30–60 seconds. Dashboard has a 90-second timeout with a user-friendly message.
+- **Cold starts:** Hosted on Render free tier — first request after inactivity takes 90-120 seconds. Dashboard has a 150-second timeout with a user-friendly message.
 - **RAGAS evaluation cost:** Evaluation runs were limited to 3 tickets due to free-tier API budget. Retrieval metrics (Context Precision, Response Relevancy) are the primary quality signal.
